@@ -1,0 +1,64 @@
+# Fonctionnalités du Système de Gestion d'Hôpital
+
+## 1. Gestion des Patients
+- **Enregistrement des patients** : Créer des fiches patients complètes
+- **Recherche avancée** : Rechercher rapidement par nom, ID, téléphone
+- **Historique des visites** : Consulter l'historique complet des visites
+- **Données démographiques** : Gérer les informations personnelles et médicales
+- **Numéro d'identification unique** : Attribution automatique d'ID patients
+
+## 2. Dossiers Médicaux
+- **Dossier médical électronique** : Centralisation des informations médicales
+- **Historique des consultations** : Accès à l'historique complet
+- **Notes médicales** : Saisie et consultation des observations
+- **Diagnostics** : Enregistrement des diagnostics par consultation
+- **Antécédents médicaux** : Suivi des antécédents et allergies
+
+## 3. Rendez-vous et Planning
+- **Agenda médical** : Vue calendrier des rendez-vous
+- **Prise de rendez-vous** : Création simple de nouveaux rendez-vous
+- **Rappels** : Liste des rendez-vous du jour
+- **Gestion des disponibilités** : Configuration des plages horaires
+- **Annulations/Reports** : Gestion des modifications de planning
+
+## 4. Examens de Laboratoire
+- **Demandes d'examens** : Création de demandes par les médecins
+- **Saisie des résultats** : Interface pour les laborantins
+- **Consultation des résultats** : Accès aux résultats par les médecins
+- **Catalogue d'examens** : Gestion des types d'examens disponibles
+- **Suivi de statut** : Traçabilité des examens (demandé, en cours, terminé)
+
+## 5. Gestion de la Pharmacie
+- **Inventaire** : Suivi des médicaments disponibles
+- **Alertes de stock** : Notification de stock bas
+- **Mouvements de stock** : Traçabilité des entrées/sorties
+- **Point de vente (POS)** : Interface de vente des médicaments
+- **Recherche médicaments** : Recherche rapide dans l'inventaire
+
+## 6. Prescriptions
+- **Création d'ordonnances** : Interface intuitive pour les médecins
+- **Historique des prescriptions** : Accès aux prescriptions passées
+- **Impression** : Génération de PDF pour les ordonnances
+- **Posologies** : Gestion des instructions de prise de médicaments
+- **Vérification disponibilité** : Contrôle avec le stock de la pharmacie
+
+## 7. Facturation
+- **Création de factures** : Génération automatique de factures
+- **Suivi des paiements** : Statut des factures (payée, en attente)
+- **Impression** : Génération de PDF pour les factures
+- **Historique** : Conservation de l'historique de facturation
+- **Détail des services** : Ventilation des frais par type de service
+
+## 8. Administration et Sécurité
+- **Gestion des utilisateurs** : Création et gestion des comptes
+- **Contrôle d'accès** : Restriction des fonctionnalités par rôle
+- **Journalisation** : Suivi des actions effectuées dans le système
+- **Paramètres système** : Configuration globale de l'application
+- **Sauvegarde des données** : Protection contre la perte de données
+
+## 9. Fonctionnalités Transversales
+- **Tableau de bord** : Vue d'ensemble adaptée à chaque rôle
+- **Recherche globale** : Recherche dans tout le système
+- **Notifications** : Alertes pour les événements importants
+- **Rapports simples** : Statistiques basiques d'activité
+- **Exports PDF** : Génération de documents pour impression

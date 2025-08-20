@@ -1,0 +1,103 @@
+# Vues et Contrôle d'Accès du Système de Gestion d'Hôpital
+
+## Niveaux d'accès définis
+
+- **ADMIN** : Accès complet à toutes les fonctionnalités
+- **MEDECIN** : Accès aux dossiers patients, consultations, rendez-vous, prescriptions
+- **INFIRMIER** : Accès limité aux dossiers patients, consultations, rendez-vous
+- **LABORANTIN** : Accès aux examens de laboratoire uniquement
+- **PHARMACIEN** : Accès à la pharmacie, stock et prescriptions
+- **RECEPTION** : Accès aux patients, rendez-vous et facturation
+
+## 1. Module Authentification
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `LoginView` | Connexion utilisateur | Tous |
+| `LogoutView` | Déconnexion | Tous |
+| `ProfileView` | Profil utilisateur | Tous (utilisateur connecté) |
+| `PasswordChangeView` | Changement de mot de passe | Tous (utilisateur connecté) |
+
+## 2. Module Dashboard
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `DashboardView` | Tableau de bord principal | Tous (adapté selon le rôle) |
+
+## 3. Module Patients
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `PatientListView` | Liste des patients | ADMIN, MEDECIN, INFIRMIER, RECEPTION |
+| `PatientDetailView` | Fiche détaillée patient | ADMIN, MEDECIN, INFIRMIER, RECEPTION |
+| `PatientCreateView` | Ajout nouveau patient | ADMIN, RECEPTION |
+| `PatientUpdateView` | Modification patient | ADMIN, RECEPTION |
+| `PatientSearchView` | Recherche de patients | ADMIN, MEDECIN, INFIRMIER, RECEPTION |
+
+## 4. Module Dossiers Médicaux
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `DossierMedicalView` | Consultation dossier | ADMIN, MEDECIN, INFIRMIER |
+| `ConsultationCreateView` | Création consultation | ADMIN, MEDECIN |
+| `ConsultationDetailView` | Détail consultation | ADMIN, MEDECIN, INFIRMIER |
+| `ConsultationListView` | Liste consultations | ADMIN, MEDECIN, INFIRMIER |
+
+## 5. Module Rendez-vous
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `CalendrierRendezVousView` | Calendrier des RDV | ADMIN, MEDECIN, INFIRMIER, RECEPTION |
+| `RendezVousListView` | Liste des RDV | ADMIN, MEDECIN, INFIRMIER, RECEPTION |
+| `RendezVousCreateView` | Création de RDV | ADMIN, RECEPTION, MEDECIN |
+| `RendezVousUpdateView` | Modification de RDV | ADMIN, RECEPTION, MEDECIN |
+| `RendezVousDuJourView` | RDV du jour | ADMIN, MEDECIN, INFIRMIER, RECEPTION |
+
+## 6. Module Examens de Laboratoire
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `ExamenListView` | Liste des examens | ADMIN, MEDECIN, LABORANTIN |
+| `ExamenCreateView` | Demande d'examen | ADMIN, MEDECIN |
+| `ExamenDetailView` | Détail d'un examen | ADMIN, MEDECIN, LABORANTIN |
+| `ResultatExamenCreateView` | Saisie résultats | ADMIN, LABORANTIN |
+| `ResultatExamenView` | Consultation résultats | ADMIN, MEDECIN, LABORANTIN |
+
+## 7. Module Pharmacie et Stock
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `MedicamentListView` | Liste des médicaments | ADMIN, PHARMACIEN |
+| `MedicamentCreateView` | Ajout médicament | ADMIN, PHARMACIEN |
+| `StockView` | État des stocks | ADMIN, PHARMACIEN |
+| `MouvementStockCreateView` | Entrée/Sortie stock | ADMIN, PHARMACIEN |
+| `MouvementStockListView` | Historique mouvements | ADMIN, PHARMACIEN |
+| `POSView` | Point de vente | ADMIN, PHARMACIEN |
+
+## 8. Module Prescriptions
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `PrescriptionListView` | Liste prescriptions | ADMIN, MEDECIN, PHARMACIEN |
+| `PrescriptionCreateView` | Création prescription | ADMIN, MEDECIN |
+| `PrescriptionDetailView` | Détail prescription | ADMIN, MEDECIN, PHARMACIEN |
+| `PrescriptionPrintView` | Impression ordonnance | ADMIN, MEDECIN, PHARMACIEN |
+
+## 9. Module Facturation
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `FactureListView` | Liste des factures | ADMIN, RECEPTION, PHARMACIEN |
+| `FactureCreateView` | Création facture | ADMIN, RECEPTION |
+| `FactureDetailView` | Détail facture | ADMIN, RECEPTION |
+| `FacturePrintView` | Impression facture | ADMIN, RECEPTION |
+| `PaiementCreateView` | Enregistrement paiement | ADMIN, RECEPTION |
+
+## 10. Module Administration
+
+| Vue | Description | Accès |
+|-----|-------------|-------|
+| `UserListView` | Liste utilisateurs | ADMIN |
+| `UserCreateView` | Création utilisateur | ADMIN |
+| `UserUpdateView` | Modification utilisateur | ADMIN |
+| `TypeExamenListView` | Gestion types examens | ADMIN |
