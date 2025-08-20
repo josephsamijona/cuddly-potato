@@ -1,0 +1,112 @@
+# Fichiers compilés Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+static_collected/
+
+# Si vous utilisez un dossier static comme racine
+# /static/
+
+# Environnement virtuel
+venv/
+env/
+ENV/
+.env
+.venv
+env.bak/
+venv.bak/
+
+# Base de données
+*.sql
+*.sqlite3
+*.db
+*.dump
+
+# Cache Redis
+dump.rdb
+
+# Fichiers de configuration IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+.DS_Store
+
+# Fichiers de configuration locale
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Fichiers de logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers générés pour le frontend
+node_modules/
+bower_components/
+
+# Fichiers de sauvegarde
+*.bak
+*.backup
+*~
+
+# Fichiers générés pour les PDFs
+*.pdf
+!templates/pdf/*.pdf
+
+# Fichiers spécifiques à Railway
+.railway/
+
+# Fichiers temporaires
+tmp/
+temp/
+.tmp/
+.temp/
+
+# Fichiers de migration (optionnel, décommentez si vous voulez les inclure)
+# */migrations/*.py
+# !*/migrations/__init__.py
+
+# Fichiers de test et couverture
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+.pytest_cache/
+cover/
+coverage/
+typeexamen.py
+medicament.py

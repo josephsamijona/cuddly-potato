@@ -1,0 +1,46 @@
+# Framework Django
+Django
+djangorestframework
+
+# Pilotes de base de données
+mysqlclient
+django-mysql
+
+# Cache Redis
+django-redis
+redis
+
+# Génération de PDF pour factures et prescriptions
+reportlab
+xhtml2pdf
+
+# Sécurité et authentification
+django-allauth
+django-otp
+
+# Gestion de formulaires améliorés
+django-crispy-forms
+crispy-bootstrap5
+
+# Calendrier pour rendez-vous
+django-scheduler
+
+# Exports (CSV, Excel)
+openpyxl
+xlsxwriter
+
+# Gestion d'images
+Pillow
+
+# Outils de déploiement
+gunicorn
+whitenoise
+python-dotenv
+
+# Utilitaires
+django-filter
+django-tables2
+django-import-export
+
+# CORS pour API
+django-cors-headers
