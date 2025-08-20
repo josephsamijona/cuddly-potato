@@ -18,6 +18,11 @@ from .views.dossiers import (
     DossierMedicalView, ConsultationCreateView, ConsultationDetailView,
     ConsultationListView, consultation_create, consultation_update
 )
+from .views.rendezvous import (
+    CalendrierRendezVousView, RendezVousListView, RendezVousCreateView,
+    RendezVousUpdateView, RendezVousDuJourView, rendez_vous_create,
+    rendez_vous_update_status, check_disponibilite
+)
 
 # URLs pour l'authentification et la gestion du profil
 urlpatterns = [
@@ -62,4 +67,20 @@ urlpatterns = [
     # Consultations - vues basées sur des fonctions (alternatives)
     path('patients/<int:patient_id>/consultation/nouvelle/', consultation_create, name='consultation_create_from_patient'),
     path('consultations/<int:pk>/modifier/', consultation_update, name='consultation_update'),
+        # Vues principales des rendez-vous
+    path('rendezvous/calendrier/', CalendrierRendezVousView.as_view(), name='rendezvous_calendrier'),
+    path('rendezvous/liste/', RendezVousListView.as_view(), name='rendezvous_list'),
+    path('rendezvous/jour/', RendezVousDuJourView.as_view(), name='rendezvous_jour'),
+    path('rendezvous/nouveau/', RendezVousCreateView.as_view(), name='rendezvous_create'),
+    path('rendezvous/<int:pk>/modifier/', RendezVousUpdateView.as_view(), name='rendezvous_update'),
+    
+    # Actions sur les rendez-vous
+    path('rendezvous/<int:pk>/statut/', rendez_vous_update_status, name='rendezvous_update_status'),
+    
+    # API pour vérifier la disponibilité
+    path('rendezvous/check-disponibilite/', check_disponibilite, name='rendezvous_check_disponibilite'),
+    
+    # Création de rendez-vous depuis la fiche patient (vue fonctionnelle)
+    path('patients/<int:patient_id>/rendezvous/nouveau/', rendez_vous_create, name='rendezvous_create_patient'),
+
 ]
