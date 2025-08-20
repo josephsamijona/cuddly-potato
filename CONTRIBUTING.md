@@ -262,9 +262,5 @@ Chaque ligne de code, chaque mot traduit, chaque retour, **nous rapproche d’un
 
 ---
 
-### ✅ Que faire maintenant ?
 
-1. Sauve ce fichier sous le nom : `CONTRIBUTING.md`
-2. Mets-le à la racine de ton projet (dans le même dossier que `README.md`)
-3. Pousse-le sur GitHub
 
